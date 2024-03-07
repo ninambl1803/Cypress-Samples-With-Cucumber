@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es2021",
+    "lib": ["es2021", "dom"],
+    "types": ["cypress", "node"],
+    "strict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/public-member-types":["./node_modules/@badeball/cypress-cucumber-preprocessor/dist/public-member-types", "node_modules/@badeball/cypress-cucumber-preprocessor/dist/public-member-types"],
+    }
+  },
+  
+  "include":["./node_modules", "**/*.ts"]
+}
