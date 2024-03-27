@@ -28,3 +28,24 @@ Then('I can check off an item as completed', function () {
     .should('have.class', 'completed')
 });
 
+Given('with a checked task', function () {
+  cy.contains('Pay electric bill')
+  .parent()
+  .find('input[type=checkbox]')
+  .check()
+});
+
+Then('can filter for completed tasks', function () {
+      cy.contains('Completed').click()
+
+      cy.get('.todo-list li')
+        .should('have.length', 1)
+        .first()
+        .should('have.text', 'Pay electric bill')
+
+      cy.contains('Walk the dog').should('not.exist')
+});
+
+  
+
+

@@ -6,3 +6,9 @@ Feature: View TODO app
     When Displays two todo items by default
     Then I can add new todo items
     Then I can check off an item as completed
+    Given with a checked task
+    Then can filter for completed tasks
+
+  
+
+
